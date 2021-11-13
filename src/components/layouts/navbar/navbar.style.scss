@@ -1,0 +1,94 @@
+@import "../../../assets/scss/variables.style";
+@import"../../../assets/scss/mixims.style";
+.header {
+	margin: 0;
+	height: 5rem;
+	z-index: 999;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $bg-primary;
+	font-size: 1rem;
+	@include applySectionPadding;
+
+a {
+    font-weight: 700;
+    color: #f1f1f1;
+    text-decoration: none;
+    margin-left: 1rem;
+
+}
+&__logo{
+	font-size: 1.8rem;
+}
+span{
+	color:$bg-secondary;
+}
+
+}
+.fade-enter-active,.fade-leave-active{
+transition: opacity .5s;
+}
+.fade-enter, .fade-leave{
+    opacity: 0;
+    transform: translateX(20px);
+}
+@media (max-width: 1024px){
+	.header__nav{
+		display: none;
+		&.active{
+		z-index: 888;
+        position:fixed;
+        top: 0;
+        right: 0;
+        background:rgba(0, 0, 0, 0.884);
+        display: flex;
+        flex-direction: column;
+        align-self:space-between;
+        justify-content:center;
+        width: 100%;
+        height: 100%;
+        transition: 5s ease;
+        text-align: center;
+		margin-top: 1rem;
+        transition: 0.5s ease;
+		}
+		& a{
+
+        font-size: 1.2em;
+        font-weight: 500;
+        margin: 1rem;
+
+		}
+		 .header__toggle{
+            position: absolute;
+            right:0;
+            background:url("../../../assets/images/basic/menu.svg"),no-repeat;
+            background-size: cover;
+            background-position:center;
+            height: 40px;
+            width: 40px;
+            margin:0 20px;
+            cursor: pointer;
+            transition: 0.3s ease;
+          }
+		  .header__toggle.active{
+           z-index: 999;
+		   content: "menu";
+           background:url("../../../assets/images/basic/menu.svg"),no-repeat;
+           background-size: cover;
+           background-position:center;
+           height: 40px;
+           width: 40px;
+           margin:0 20px;
+           transition: 0.3s ease;
+           filter: invert(0);
+          }
+
+	}
+
+}

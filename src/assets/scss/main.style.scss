@@ -2,20 +2,20 @@
 @import '../../../node_modules/bootstrap-vue/src/index';
 @import './variables.style';
 @import './reset.style';
-
+@import './font.style';
 
 
 body{
     overflow-y: scroll;
     overflow-x: hidden;
-    font: 62% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font:  62% "Poppins-Regular", sans-serif;
 		line-height: 1.4em;
+		color:rgb(129, 136, 143);
 }
 
 a{
-    color:inherit;
     text-decoration: none !important;
-    &.router-link-exact-active {
+    & .router-link-exact-active {
       color: #e95055;
     }
     &:hover{
