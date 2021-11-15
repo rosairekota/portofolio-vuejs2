@@ -1,21 +1,32 @@
 <template>
-  <div class="service">
-    <b-container>
-      <SectionTitle title="Services" subtitle="Quels sont mes services ?" />
-      <div class="service__container">
-        <cardServices
-          title="Web Design"
-          description="Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy"
-          icon="palette"
-        />
-      </div>
+  <b-container fluid class="services">
+    <SectionTitle
+      title="Services"
+      subtitle="Quels sont mes domaines d'expertise ?"
+    />
+    <b-container class="services__container">
+      <b-row>
+        <b-col
+          sm="12"
+          md="4"
+          v-for="service in services"
+          v-bind:key="service.name"
+        >
+          <cardServices
+            :title="service.name"
+            :description="service.description"
+            :icon="service.icon"
+          />
+        </b-col>
+      </b-row>
     </b-container>
-  </div>
+  </b-container>
 </template>
 
 <script>
 import SectionTitle from "../shared/section-title/SectionTitle.vue";
 import CardServices from "../shared/card/Card.vue";
+import { fetchAPI } from "../../config/ApiURL";
 export default {
   name: "Service",
   components: {
@@ -24,7 +35,32 @@ export default {
   },
   data() {
     return {
-      title: "Je suis Rosaire Kota",
+      services: [
+        {
+          name: "Web Design",
+          icon: "fas fa-palette",
+          description:
+            "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
+        },
+        {
+          name: "Développement web",
+          icon: "fas fa-file-code",
+          description:
+            "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
+        },
+        {
+          name: "Administration Réseaux",
+          icon: "fas fa-server",
+          description:
+            "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
+        },
+      ],
+    };
+  },
+  mounted() {
+    async () => {
+      const serices = await fetchAPI.get("/services");
+      this.services.push(serices);
     };
   },
 };

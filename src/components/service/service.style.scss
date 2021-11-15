@@ -1,11 +1,14 @@
 @import "../../assets/scss/variables.style";
 @import"../../assets/scss/mixims.style";
 
-.service{
+.services{
     background: linear-gradient(180deg, rgba(3,2,23,1) 24%, rgba(19, 17, 48, 0.77) 97%);
 	height: 57rem;
 	color:#fff;
      padding: 0;
 	 margin: 0;
+	 .services__container{
+		 padding-top: 8rem;
+	 }
 }
 

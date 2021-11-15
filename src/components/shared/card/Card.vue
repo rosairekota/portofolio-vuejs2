@@ -1,7 +1,7 @@
 <template>
   <div class="service__card">
     <div class="services__icon">
-      <i class="fas fa-palette"></i>
+      <i :class="icon"></i>
     </div>
     <h4>{{ title }}</h4>
     <p>{{ description }}</p>
