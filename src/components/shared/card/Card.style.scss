@@ -19,6 +19,13 @@
     cursor: pointer;
 	&:hover,&:active{
 		background-color:$bg-secondary;
+		color:#fff;
+	.fas{
+		font-size: 4rem;
+		color:#fff;
+		transform: scaleX(-1);
+		transition: all .5s ease;
+	}
 	}
 	h4{
 		font-weight: 700;
@@ -27,5 +34,12 @@
 		font-size: 1rem;
 		font-weight: 100;
 		line-height: 1.5;
+		font-family: "karla";
+		margin-top: 1rem;
 	}
+	.fas{
+	font-size: 4rem;
+	color:$bg-secondary;
+	margin-bottom: 1.5rem;
+    }
 }

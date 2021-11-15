@@ -3,21 +3,24 @@
     <b-row class="banner">
       <b-col sm="12" md="8">
         <div class="banner__social-media">
-          <img
-            src="../../assets/illustrations/facebook.svg"
-            alt="facebook"
-            class="social__facebook"
-          />
-          <img
-            src="../../assets/illustrations/twitter.svg"
-            alt="twitter"
-            class="social__twitter"
-          />
-          <img
-            src="../../assets/illustrations/linkedin.svg"
-            alt="linkedin"
-            class="social__linkedin"
-          />
+          <div class="social__github">
+            <a :href="githublink">
+              <img src="../../assets/illustrations/ci_github.svg" alt="github"
+            /></a>
+          </div>
+          <div class="social__twitter">
+            <a :href="twitterlink">
+              <img src="../../assets/illustrations/twitter.svg" alt="twitter" />
+            </a>
+          </div>
+          <div class="social__linkedin">
+            <a :href="linkedinlink">
+              <img
+                src="../../assets/illustrations/linkedin.svg"
+                alt="linkedin"
+              />
+            </a>
+          </div>
         </div>
         <div class="banner__description">
           <h1>{{ title }}</h1>
@@ -49,6 +52,9 @@ export default {
   data() {
     return {
       title: "Je suis Rosaire Kota",
+      githublink: "https://github.com/rosairekota",
+			twitterlink:"https://twitter.com/rosaire_kota",
+			linkedinlink:"https://linkedin.com/in/rosaire-kota-6067981b4/",
     };
   },
 };

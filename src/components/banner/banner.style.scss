@@ -6,13 +6,13 @@
 	background: linear-gradient(360deg, rgba(3,2,23,1) 24%, rgba(19, 17, 48, 0.77) 97%);
 	height: 37rem;
 	color:#fff;
-	padding-top: 17rem;
+	padding-top: 10rem;
 	& .banner{
 	  @include applySectionPadding;
 	  h1{
 		  font-family: 'Poppins';
 		  font-size: 3.3rem;
-		  margin-bottom: 1.6rem;
+		  margin: 2.8rem 0;
 	  }
 	  p{
 		  font-size: 1.6rem;
@@ -21,50 +21,47 @@
 	  }
 
 	  .banner__social-media{
-		  .social__facebook{
-
+		  	display: flex;
+		    justify-content: start;
+		   .social__github,.social__linkedin,.social__twitter{
 			  width: 3rem;
 			  height: 3rem;
 			  border:2px solid $bg-secondary;
 			  border-radius: 100%;
-			   margin-right: 3000rem;
 			  padding: 0.6rem;
+			  margin-right: 1rem;
+			  transition: background-color .3s ease-in;
+			  font-weight: 700;
+			  cursor: pointer;
 
 		  }
-		    .social__twitter{
+		  .social__github:hover{
+              background-color:rgb(30, 32, 34);
+			  border: 0;
+			}
+		   .social__twitter:hover{
+              background-color:rgb(73, 164, 238);
+			  border: 0;
+			}
+			 .social__linkedin:hover{
+              background-color:rgb(41, 118, 180);
+			  border: 0;
+			}
 
-			  width: 3rem;
-			  height: 3rem;
-			  border:2px solid $bg-secondary;
-			  border-radius: 100%;
-			   margin-right: 35px;
-			  padding: 0.6rem;
-
-		  }
-		    .social__linkedin{
-
-			  width: 3rem;
-			  height: 3rem;
-			  border:2px solid $bg-secondary;
-			  border-radius: 100%;
-			   margin-left: 40px;
-			  padding: 0.6rem;
-
-		  }
 	  }
 
 	}
 	img{
 		width: 100%;
-		position:absolute;
-		right: 0;
-		left: 0;
-		top: -7rem;
+		display: block;
 	}
 	.banner__resume{
 		display: flex;
 		justify-content: start;
 		margin-top: 2.6rem;
+		.btn-left:hover{
+			background-color:$bg-secondary;
+		}
 		.btn-right{
 			margin-left: 1.2rem;
 			background-color:$bg-secondary;

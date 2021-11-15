@@ -11,7 +11,7 @@
 	padding: 1.3rem 1rem;
     transition: background-color .3s ease-in;
 	font-weight: 700;
-	&:hover,&:active,&:user-valid{
+	&:hover,&:active{
 		background-color:$bg-secondary;
 	}
 }
