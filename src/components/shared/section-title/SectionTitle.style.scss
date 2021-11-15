@@ -1,0 +1,43 @@
+@import "../../../assets/scss/variables.style";
+@import"../../../assets/scss/mixims.style";
+.section__title{
+	padding-top: 10rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+
+h2{
+	position: relative;
+	text-align: center;
+	color:#fff;
+    transition: all .3s ease-in;
+	font-weight: 700;
+	&::after{
+		content:"";
+		display: block;
+	    position: absolute;
+		right: 0;
+		left: 2rem;
+		top: 5.5rem;
+		width: 4rem;
+		height: 1rem;
+		background-color:$bg-secondary;
+		border-radius:20px;
+	}
+	&::before{
+		position: absolute;
+		right: 0;
+		left: -4rem;
+		top: 6rem;
+		content:"";
+		display: block;
+		width: 16rem;
+		height: 3px;
+		background-color:#ffff;
+	}
+}
+h6{
+	text-align: center;
+}
+}

@@ -1,6 +1,7 @@
 @import "../../../assets/scss/variables.style";
 @import"../../../assets/scss/mixims.style";
 .button{
+
 	width: 13rem;
 	border:2px solid $bg-secondary;
 	background-color:transparent;
@@ -10,7 +11,7 @@
 	padding: 1.3rem 1rem;
     transition: background-color .3s ease-in;
 	font-weight: 700;
-	&:hover{
+	&:hover,&:active,&:user-valid{
 		background-color:$bg-secondary;
 	}
 }
