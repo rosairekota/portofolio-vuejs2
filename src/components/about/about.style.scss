@@ -5,10 +5,17 @@
     background: linear-gradient(360deg, rgba(3,2,23,1) 24%, rgba(19, 17, 48, 0.77) 97%);
 	height: 57rem;
 	color:#fff;
+	font-size: 1rem;
+	text-align: justify;
+	line-height: 1.5;
+	img{
+		width: 100%;
+		border-bottom-left-radius: 70%;
 
+	}
 	.section__title{
-  padding: 0;
-   padding-top: -2rem;
+   margin-top: -10rem ;
+   padding-bottom: 8rem;
   h2{
 	position: relative;
 	text-align: center;
@@ -23,6 +30,28 @@
 		top: 6rem;
 	}
 }
-}
 
+}
+h4{
+font-weight: 700;
+font-size: 2rem;
+padding: 2rem 0;
+}
+.about__contact{
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+.contact_left,.contact_right{
+	padding-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+}
+.contact_left:nth-child(1) span,.contact_right:nth-child(2) span{
+	color:$bg-secondary;
+	font-weight: bold;
+
+}
+}
 }
