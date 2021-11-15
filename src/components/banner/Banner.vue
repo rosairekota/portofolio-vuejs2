@@ -36,7 +36,11 @@
         </div>
       </b-col>
       <div class="col-sm-12 col-md-4">
-        <img src="../../assets/illustrations/illustra.svg" alt="illustra" />
+        <img
+          src="../../assets/illustrations/illustra.svg"
+          alt="illustra"
+          class="banner__image"
+        />
       </div>
     </b-row>
   </b-container>
@@ -53,8 +57,8 @@ export default {
     return {
       title: "Je suis Rosaire Kota",
       githublink: "https://github.com/rosairekota",
-			twitterlink:"https://twitter.com/rosaire_kota",
-			linkedinlink:"https://linkedin.com/in/rosaire-kota-6067981b4/",
+      twitterlink: "https://twitter.com/rosaire_kota",
+      linkedinlink: "https://linkedin.com/in/rosaire-kota-6067981b4/",
     };
   },
 };

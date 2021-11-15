@@ -31,14 +31,28 @@
 		}
 
 	p{
-		font-size: 1rem;
+		font-size: 150%;
 		font-family: 'Poppins-Light';
 		line-height: 1;
 		margin: 0;
+		margin-bottom: 1rem;
 
+	}
+	.btn-right{
+			margin-left: 0.5rem;
+			background-color:$bg-secondary;
+			&:hover{
+				background-color:transparent;
+			}
+	}
+	.banner__image{
+		width: 90%;
+		display: block;
+		margin-top: 1.5rem;
 	}
 
 }
+
 @media screen and (min-width:768px) {
 .container-fluid{
 	height: 37rem;
@@ -80,10 +94,7 @@
 	}
 
 	}
-	img{
-		width: 100%;
-		display: block;
-	}
+
 	.banner__resume{
 		display: flex;
 		justify-content: start;
@@ -98,6 +109,9 @@
 				background-color:transparent;
 			}
 		}
+	}
+	.banner__image{
+		margin: 0;
 	}
 }
 
