@@ -1,34 +1,20 @@
 <template>
-  <div class="home">
-    <button @click="addTodo">Ajouter une tache</button>
+  <div>
+    <banner/>
+		<service/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-
+import Banner from "../components/banner/Banner.vue";
+import Service from "../components/service/Service.vue";
 
 export default {
   name: "Home",
-  data() {
-    return {
-      todos: [
-        {
-          name: "Demo",
-          completed: true,
-        },
-      ],
-    };
-  },
   components: {
-  },
-  methods: {
-    addTodo() {
-      this.todos.push({
-        name: "rkota",
-        completed: false,
-      });
-    },
-  },
+    Banner,
+		Service,
+},
+
 };
 </script>

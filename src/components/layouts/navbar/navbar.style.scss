@@ -11,7 +11,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: $bg-primary;
+	background-color:transparent;
 	font-size: 1rem;
 	@include applySectionPadding;
 
@@ -19,7 +19,7 @@ a {
     font-weight: 700;
     color: #f1f1f1;
     text-decoration: none;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 
 }
 &__logo{
@@ -61,7 +61,7 @@ transition: opacity .5s;
 
         font-size: 1.2em;
         font-weight: 500;
-        margin: 1rem;
+        margin: 1.2rem;
 
 		}
 		 .header__toggle{
