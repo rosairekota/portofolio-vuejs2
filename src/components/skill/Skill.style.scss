@@ -1,8 +1,18 @@
+@import "../../assets/scss/variables.style";
+@import"../../assets/scss/mixims.style";
 .skills{
 	background: linear-gradient(180deg, rgba(3,2,23,1) 24%, rgba(19, 17, 48, 0.77) 97%);
-	height: 57rem;
 	color:#fff;
-	font-size: 1rem;
 	text-align: justify;
-	line-height: 1.5;
+
+	p{
+		font-size: 1rem;
+		@include applyLineHeight;
+	}
+}
+
+@media screen and (min-width:768px) {
+	.skills{
+		min-height: 57rem;
+	}
 }

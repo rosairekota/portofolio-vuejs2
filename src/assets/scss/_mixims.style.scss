@@ -2,3 +2,8 @@
 {
 	padding: 0 6rem;
 }
+
+@mixin applyLineHeight
+{
+	line-height: 2;
+}
