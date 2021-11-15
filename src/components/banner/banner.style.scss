@@ -2,53 +2,82 @@
 @import "../../assets/scss/variables.style";
 @import"../../assets/scss/mixims.style";
 
+
 .container-fluid{
 	background: linear-gradient(360deg, rgba(3,2,23,1) 24%, rgba(19, 17, 48, 0.77) 97%);
-	height: 37rem;
 	color:#fff;
+	padding-top: 3rem;
+	.banner__social-media{
+	display: flex;
+	justify-content: start;
+	padding-bottom: 1rem;
+	}
+.social__github,.social__linkedin,.social__twitter{
+	width: 3rem;
+	height: 3rem;
+	border:2px solid $bg-secondary;
+	border-radius: 100%;
+	padding: 0.6rem;
+	margin-right: 1rem;
+	transition: background-color .3s ease-in;
+	font-weight: 700;
+	cursor: pointer;
+
+	}
+	h1{
+		font-family: 'Poppins';
+		font-size: 1.3rem;
+		margin: 1.8rem 0;
+		}
+
+	p{
+		font-size: 1rem;
+		font-family: 'Poppins-Light';
+		line-height: 1;
+		margin: 0;
+
+	}
+
+}
+@media screen and (min-width:768px) {
+.container-fluid{
+	height: 37rem;
 	padding-top: 10rem;
 	& .banner{
-	  @include applySectionPadding;
-	  h1{
-		  font-family: 'Poppins';
-		  font-size: 3.3rem;
-		  margin: 2.8rem 0;
-	  }
-	  p{
-		  font-size: 1.6rem;
-		  font-family: 'Poppins-Light';
-
-	  }
-
-	  .banner__social-media{
-		  	display: flex;
-		    justify-content: start;
-		   .social__github,.social__linkedin,.social__twitter{
-			  width: 3rem;
-			  height: 3rem;
-			  border:2px solid $bg-secondary;
-			  border-radius: 100%;
-			  padding: 0.6rem;
-			  margin-right: 1rem;
-			  transition: background-color .3s ease-in;
-			  font-weight: 700;
-			  cursor: pointer;
-
-		  }
-		  .social__github:hover{
-              background-color:rgb(30, 32, 34);
-			  border: 0;
+	@include applySectionPadding;
+	h1{
+		font-family: 'Poppins';
+		font-size: 3.3rem;
+		margin: 2.8rem 0;
+		@media screen and(max-width:768px) {
+			&{
+				font-size: 2.3rem !important;
+				margin: 0;
 			}
-		   .social__twitter:hover{
-              background-color:rgb(73, 164, 238);
-			  border: 0;
+		}
+	}
+
+	p{
+		font-size: 1.6rem;
+
+	}
+
+	.banner__social-media{
+
+		.social__github:hover{
+            background-color:rgb(30, 32, 34);
+			border: 0;
 			}
-			 .social__linkedin:hover{
-              background-color:rgb(41, 118, 180);
-			  border: 0;
+		.social__twitter:hover{
+            background-color:rgb(73, 164, 238);
+			border: 0;
+		}
+			.social__linkedin:hover{
+            background-color:rgb(41, 118, 180);
+			border: 0;
 			}
 
-	  }
+	}
 
 	}
 	img{
@@ -70,4 +99,6 @@
 			}
 		}
 	}
+}
+
 }

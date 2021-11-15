@@ -1,44 +1,8 @@
 @import "../../../assets/scss/variables.style";
 @import"../../../assets/scss/mixims.style";
-.header {
-	margin: 0;
-	height: 5rem;
-	z-index: 999;
-    position:fixed;
-    left:0;
-    top:0;
-    width:100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background-color:transparent;
-	font-size: 1rem;
-	@include applySectionPadding;
 
-a {
-    font-weight: 700;
-    color: #f1f1f1;
-    text-decoration: none;
-    margin-left: 1.5rem;
 
-}
-&__logo{
-	font-size: 1.8rem;
-}
-span{
-	color:$bg-secondary;
-}
-
-}
-.fade-enter-active,.fade-leave-active{
-transition: opacity .5s;
-}
-.fade-enter, .fade-leave{
-    opacity: 0;
-    transform: translateX(20px);
-}
-@media (max-width: 1024px){
-	.header__nav{
+.header__nav{
 		display: none;
 		&.active{
 		z-index: 888;
@@ -90,5 +54,45 @@ transition: opacity .5s;
           }
 
 	}
+@media screen and (min-width:768px) {
+
+ .header {
+	margin: 0;
+	height: 5rem;
+	z-index: 999;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color:transparent;
+	font-size: 1rem;
+	@include applySectionPadding;
+
+a {
+    font-weight: 700;
+    color: #f1f1f1;
+    text-decoration: none;
+    margin-left: 1.5rem;
+
+}
+&__logo{
+	font-size: 1.8rem;
+}
+span{
+	color:$bg-secondary;
+}
+
+}
+.fade-enter-active,.fade-leave-active{
+transition: opacity .5s;
+}
+.fade-enter, .fade-leave{
+    opacity: 0;
+    transform: translateX(20px);
+}
+
 
 }
