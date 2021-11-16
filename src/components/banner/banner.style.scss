@@ -38,13 +38,7 @@
 		margin-bottom: 1rem;
 
 	}
-	.btn-right{
-			margin-left: 0.5rem;
-			background-color:$bg-secondary;
-			&:hover{
-				background-color:transparent;
-			}
-	}
+
 	.banner-image{
 		width: 100%;
 		display: block;
@@ -99,16 +93,7 @@
 		display: flex;
 		justify-content: start;
 		margin-top: 2.6rem;
-		.btn-left:hover{
-			background-color:$bg-secondary;
-		}
-		.btn-right{
-			margin-left: 1.2rem;
-			background-color:$bg-secondary;
-			&:hover{
-				background-color:transparent;
-			}
-		}
+
 	}
 	.banner-image{
 		margin: 0;

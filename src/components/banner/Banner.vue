@@ -31,8 +31,8 @@
           </p>
         </div>
         <div class="banner-resume">
-          <SharedButton title="Mes Realisations" class="btn-left" />
-          <SharedButton title="Télécharger  mon CV" class="btn-right" />
+          <SharedButton title="Mes Realisations" outline="outline" />
+          <SharedButton title="Télécharger  mon CV" filled="filled" />
         </div>
       </b-col>
       <div class="col-sm-12 col-md-4">
