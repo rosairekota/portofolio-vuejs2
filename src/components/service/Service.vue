@@ -4,7 +4,7 @@
       title="Services"
       subtitle="Quels sont mes domaines d'expertise ?"
     />
-    <b-container class="services__container">
+    <b-container class="services-container">
       <b-row>
         <b-col
           sm="12"
@@ -26,21 +26,22 @@
 <script>
 import SectionTitle from "../shared/section-title/SectionTitle.vue";
 import CardServices from "../shared/card/Card.vue";
-import store from "../../store/serviceStore";
-import Vuex from "vuex";
+import { mapGetters} from "vuex";
 export default {
   name: "Service",
-	store,
   components: {
     SectionTitle,
     CardServices,
   },
 
   computed: {
-    ...Vuex.mapGetters(['services']),
+    ...mapGetters("services", {
+      services: "services",
+    }),
   },
+
   mounted() {
-    this.$store.dispatch("fetchServices");
+    this.$store.dispatch("services/fetchServices");
   },
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
-  <div class="service__card">
-    <div class="services__icon">
+  <div class="service-card">
+    <div class="services-icon">
       <i :class="icon"></i>
     </div>
     <h4>{{ title }}</h4>

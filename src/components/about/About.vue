@@ -4,7 +4,7 @@
       title="A propos de Moi"
       subtitle="Pourquoi me faire Confiance ?"
     />
-    <b-container class="services__container">
+    <b-container class="services-container">
       <b-row>
         <b-col sm="12" md="4">
           <img :src="photo" alt="" />
@@ -19,7 +19,7 @@
           <div v-html="about.description">
             {{ about.description | raw }}
           </div>
-          <div class="about__contact">
+          <div class="about-contact">
             <div class="contact_left">
               <p>
                 <span>Nom : </span> {{ about.firstname }} {{ about.lastname }}
@@ -40,11 +40,10 @@
 <script>
 import SectionTitle from "../shared/section-title/SectionTitle.vue";
 import photo from "../../assets/images/basic/rkota-pur.png";
-import store from "../../store/aboutStore";
-import Vuex from "vuex";
+
+import { mapGetters } from "vuex";
 export default {
   name: "About",
-  store,
   components: {
     SectionTitle,
   },
@@ -54,10 +53,12 @@ export default {
     };
   },
   computed: {
-    ...Vuex.mapGetters(["abouts"]),
+    ...mapGetters("abouts", {
+      abouts: "getAbouts",
+    }),
   },
   mounted() {
-    this.$store.dispatch("fetchAbouts");
+    this.$store.dispatch("abouts/fetchAbouts");
   },
 };
 </script>

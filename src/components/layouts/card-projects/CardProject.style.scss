@@ -1,11 +1,12 @@
 @import "../../../assets/scss/variables.style";
 @import"../../../assets/scss/mixims.style";
 
-.service-card{
+.card-project{
 	text-align: center;
 	width: 100%;
 	min-height: 338px;
 	display: flex;
+	overflow: hidden;
 	flex-direction: column;
 	justify-content: center;
 	align-items:space-between;
@@ -41,10 +42,13 @@
 	color:$bg-secondary;
 	margin-bottom: 1.5rem;
     }
+	.card-project-image{
+		width: 100%;
+	}
 }
 
 @media screen and (min-width:768px){
-.service-card{
+.card-project{
     margin-bottom: 0;
 	h4{
 		font-weight: 700;
@@ -63,3 +67,5 @@
     }
 }
 }
+
+

@@ -1,7 +1,4 @@
-import { fetchAPI } from "../config/ApiURL";
-import Vuex from "vuex";
-import Vue from "vue";
-Vue.use(Vuex);
+import { fetchAPI } from "../../config/ApiURL";
 
 //to handle state
 const state = {
@@ -30,14 +27,12 @@ const mutations = {
 };
 
 //export store module
-let serviceStore = new Vuex.Store({
+const services = {
+  namespaced: true,
   state,
   getters,
   actions,
   mutations,
-  strict: true,
-});
+};
 
-global.store = serviceStore;
-
-export default serviceStore;
+export default services;

@@ -1,5 +1,5 @@
 <template>
-    <div class="section__title">
+    <div class="section-title">
 		<h2>{{ title }}</h2>
 		<h6>{{subtitle}}</h6>
 		</div>

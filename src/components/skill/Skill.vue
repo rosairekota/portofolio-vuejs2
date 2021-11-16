@@ -1,6 +1,6 @@
 <template>
   <b-container fluid class="skills">
-    <b-container class="services__container">
+    <b-container class="services-container">
       <b-row>
         <b-col sm="12" md="6">
           <h2>JE SUIS EXPERT EN</h2>

@@ -1,8 +1,46 @@
 @import "../../../assets/scss/variables.style";
 @import"../../../assets/scss/mixims.style";
+ .header {
+	margin: 0;
+	height: 5rem;
+	z-index: 999;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color:transparent;
+	font-size: 1rem;
+	@include applySectionPadding;
 
+a {
+    font-weight: 700;
+    color: #f1f1f1;
+    text-decoration: none;
+    margin-left: 1.5rem;
 
-.header__nav{
+}
+&-logo{
+	font-size: 1.8rem;
+}
+span{
+	color:$bg-secondary;
+}
+
+}
+.fade-enter-active,.fade-leave-active{
+transition: opacity .5s;
+}
+.fade-enter, .fade-leave{
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+@media screen and (max-width:768){
+
+.header-nav{
 		display: none;
 		&.active{
 		z-index: 888;
@@ -28,7 +66,7 @@
         margin: 1.2rem;
 
 		}
-		 .header__toggle{
+		 .header-toggle{
             position: absolute;
             right:0;
             background:url("../../../assets/images/basic/menu.svg"),no-repeat;
@@ -40,7 +78,7 @@
             cursor: pointer;
             transition: 0.3s ease;
           }
-		  .header__toggle.active{
+		  .header-toggle.active{
            z-index: 999;
 		   content: "menu";
            background:url("../../../assets/images/basic/menu.svg"),no-repeat;
@@ -54,45 +92,4 @@
           }
 
 	}
-@media screen and (min-width:768px) {
-
- .header {
-	margin: 0;
-	height: 5rem;
-	z-index: 999;
-    position:fixed;
-    left:0;
-    top:0;
-    width:100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background-color:transparent;
-	font-size: 1rem;
-	@include applySectionPadding;
-
-a {
-    font-weight: 700;
-    color: #f1f1f1;
-    text-decoration: none;
-    margin-left: 1.5rem;
-
-}
-&__logo{
-	font-size: 1.8rem;
-}
-span{
-	color:$bg-secondary;
-}
-
-}
-.fade-enter-active,.fade-leave-active{
-transition: opacity .5s;
-}
-.fade-enter, .fade-leave{
-    opacity: 0;
-    transform: translateX(20px);
-}
-
-
 }

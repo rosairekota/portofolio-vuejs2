@@ -7,12 +7,12 @@
 	background: linear-gradient(360deg, rgba(3,2,23,1) 24%, rgba(19, 17, 48, 0.77) 97%);
 	color:#fff;
 	padding-top: 3rem;
-	.banner__social-media{
+	.banner-social-media{
 	display: flex;
 	justify-content: start;
 	padding-bottom: 1rem;
 	}
-.social__github,.social__linkedin,.social__twitter{
+.social-github,.social-linkedin,.social-twitter{
 	width: 3rem;
 	height: 3rem;
 	border:2px solid $bg-secondary;
@@ -45,7 +45,7 @@
 				background-color:transparent;
 			}
 	}
-	.banner__image{
+	.banner-image{
 		width: 100%;
 		display: block;
 		margin-top: 1.5rem;
@@ -76,17 +76,17 @@
 
 	}
 
-	.banner__social-media{
+	.banner-social-media{
 
-		.social__github:hover{
+		.social-github:hover{
             background-color:rgb(30, 32, 34);
 			border: 0;
 			}
-		.social__twitter:hover{
+		.social-twitter:hover{
             background-color:rgb(73, 164, 238);
 			border: 0;
 		}
-			.social__linkedin:hover{
+			.social-linkedin:hover{
             background-color:rgb(41, 118, 180);
 			border: 0;
 			}
@@ -95,7 +95,7 @@
 
 	}
 
-	.banner__resume{
+	.banner-resume{
 		display: flex;
 		justify-content: start;
 		margin-top: 2.6rem;
@@ -110,7 +110,7 @@
 			}
 		}
 	}
-	.banner__image{
+	.banner-image{
 		margin: 0;
 	}
 }

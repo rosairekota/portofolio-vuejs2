@@ -1,20 +1,19 @@
 <template>
   <b-container fluid class="">
-    <b-row class="banner" v-for="about in abouts"
-          v-bind:key="about.id">
+    <b-row v-for="about in abouts" :key="about.id" class="banner">
       <b-col sm="12" md="8">
-        <div class="banner__social-media">
-          <div class="social__github">
+        <div class="banner-social-media">
+          <div class="social-github" v-if="about.github_link">
             <a :href="about.github_link">
               <img src="../../assets/illustrations/ci_github.svg" alt="github"
             /></a>
           </div>
-          <div class="social__twitter">
+          <div class="social-twitter" v-if="about.twitter_link">
             <a :href="about.twitter_link">
               <img src="../../assets/illustrations/twitter.svg" alt="twitter" />
             </a>
           </div>
-          <div class="social__linkedin">
+          <div class="social-linkedin" v-if="about.linkedin_link">
             <a :href="about.linkedin_link">
               <img
                 src="../../assets/illustrations/linkedin.svg"
@@ -23,15 +22,15 @@
             </a>
           </div>
         </div>
-        <div class="banner__description">
+        <div class="banner-description">
           <h1>{{ title }} {{ about.firstname }} {{ about.lastname }}</h1>
           <p>Développeur professionnel web et web mobile.</p>
           <br />
-          <p class="banner__description">
+          <p class="banner-description">
             Je suis enthousiaste, créatif et innovant.
           </p>
         </div>
-        <div class="banner__resume">
+        <div class="banner-resume">
           <SharedButton title="Mes Realisations" class="btn-left" />
           <SharedButton title="Télécharger  mon CV" class="btn-right" />
         </div>
@@ -39,8 +38,8 @@
       <div class="col-sm-12 col-md-4">
         <img
           src="../../assets/illustrations/illustra.svg"
-          alt="illustra"
-          class="banner__image"
+          alt="illustration_homme_devant_pc"
+          class="banner-image"
         />
       </div>
     </b-row>
@@ -49,12 +48,10 @@
 
 <script>
 import SharedButton from "../shared/button/Button.vue";
-import store from "../../store/aboutStore";
-import Vuex from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Banner",
-	store,
   components: {
     SharedButton,
   },
@@ -63,11 +60,13 @@ export default {
       title: "Je suis ",
     };
   },
-	computed: {
-    ...Vuex.mapGetters(["abouts"]),
+  computed: {
+    ...mapGetters("abouts", {
+      abouts: "getAbouts",
+    }),
   },
   mounted() {
-    this.$store.dispatch("fetchAbouts");
+    this.$store.dispatch("abouts/fetchAbouts");
   },
 };
 </script>
