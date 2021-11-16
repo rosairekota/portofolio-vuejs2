@@ -26,42 +26,21 @@
 <script>
 import SectionTitle from "../shared/section-title/SectionTitle.vue";
 import CardServices from "../shared/card/Card.vue";
-import { fetchAPI } from "../../config/ApiURL";
+import store from "../../store/serviceStore";
+import Vuex from "vuex";
 export default {
   name: "Service",
+	store,
   components: {
     SectionTitle,
     CardServices,
   },
-  data() {
-    return {
-      services: [
-        {
-          name: "Web Design",
-          icon: "fas fa-palette",
-          description:
-            "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
-        },
-        {
-          name: "Développement web",
-          icon: "fas fa-file-code",
-          description:
-            "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
-        },
-        {
-          name: "Administration Réseaux",
-          icon: "fas fa-server",
-          description:
-            "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
-        },
-      ],
-    };
+
+  computed: {
+    ...Vuex.mapGetters(['services']),
   },
   mounted() {
-    async () => {
-      const serices = await fetchAPI.get("/services");
-      this.services.push(serices);
-    };
+    this.$store.dispatch("fetchServices");
   },
 };
 </script>

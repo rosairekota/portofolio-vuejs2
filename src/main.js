@@ -2,6 +2,8 @@ import Vue from "vue";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import App from "./App.vue";
 import router from "./routes";
+import Vuex from "vuex";
+Vue.use(Vuex);
 
 import "./assets/scss/main.style.scss";
 

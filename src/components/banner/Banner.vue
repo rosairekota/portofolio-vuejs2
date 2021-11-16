@@ -1,20 +1,21 @@
 <template>
   <b-container fluid class="">
-    <b-row class="banner">
+    <b-row class="banner" v-for="about in abouts"
+          v-bind:key="about.id">
       <b-col sm="12" md="8">
         <div class="banner__social-media">
           <div class="social__github">
-            <a :href="githublink">
+            <a :href="about.github_link">
               <img src="../../assets/illustrations/ci_github.svg" alt="github"
             /></a>
           </div>
           <div class="social__twitter">
-            <a :href="twitterlink">
+            <a :href="about.twitter_link">
               <img src="../../assets/illustrations/twitter.svg" alt="twitter" />
             </a>
           </div>
           <div class="social__linkedin">
-            <a :href="linkedinlink">
+            <a :href="about.linkedin_link">
               <img
                 src="../../assets/illustrations/linkedin.svg"
                 alt="linkedin"
@@ -23,7 +24,7 @@
           </div>
         </div>
         <div class="banner__description">
-          <h1>{{ title }}</h1>
+          <h1>{{ title }} {{ about.firstname }} {{ about.lastname }}</h1>
           <p>Développeur professionnel web et web mobile.</p>
           <br />
           <p class="banner__description">
@@ -48,18 +49,25 @@
 
 <script>
 import SharedButton from "../shared/button/Button.vue";
+import store from "../../store/aboutStore";
+import Vuex from "vuex";
+
 export default {
   name: "Banner",
+	store,
   components: {
     SharedButton,
   },
   data() {
     return {
-      title: "Je suis Rosaire Kota",
-      githublink: "https://github.com/rosairekota",
-      twitterlink: "https://twitter.com/rosaire_kota",
-      linkedinlink: "https://linkedin.com/in/rosaire-kota-6067981b4/",
+      title: "Je suis ",
     };
+  },
+	computed: {
+    ...Vuex.mapGetters(["abouts"]),
+  },
+  mounted() {
+    this.$store.dispatch("fetchAbouts");
   },
 };
 </script>
