@@ -20,12 +20,18 @@
         </b-col>
       </b-row>
     </b-container>
+    <b-row>
+      <b-col sm="12" md="4 offset-md-5">
+        <SharedButton title="En savoir plus" outlined/>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
 <script>
 import SectionTitle from "../shared/section-title/SectionTitle.vue";
 import Cardprojects from "../shared/card/Card.vue";
+import SharedButton from "../shared/button/Button.vue";
 
 import { mapGetters } from "vuex";
 export default {
@@ -33,6 +39,7 @@ export default {
   components: {
     SectionTitle,
     Cardprojects,
+    SharedButton,
   },
 
   computed: {

@@ -1,7 +1,7 @@
 <template>
-  <button class="button" :class="[outlined ? 'outlined' : 'filled']">
+  <a class="button" :class="[outlined ? 'outlined' : 'filled']" href="#">
     {{ title }}
-  </button>
+  </a>
 </template>
 
 <script>
