@@ -14,14 +14,14 @@ const getters = {
 const actions = {
   fetchProjects({ commit }) {
     fetchAPI.get("/projects").then((response) => {
-      commit("GET_PROJECTS", response.data.data);
+      commit("SET_PROJECTS", response.data.data);
     });
   },
 };
 
 //to handle mutations
 const mutations = {
-  GET_PROJECTS: (state, projects) => {
+  SET_PROJECTS: (state, projects) => {
     state.projects = projects;
   },
 };

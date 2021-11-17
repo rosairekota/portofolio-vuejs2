@@ -1,5 +1,5 @@
 <template>
-  <button class="button" :class="[outline ? 'outline' : 'filled']">
+  <button class="button" :class="[outlined ? 'outlined' : 'filled']">
     {{ title }}
   </button>
 </template>
@@ -9,8 +9,7 @@ export default {
   name: "Button",
   props: {
     title: String,
-    outline: String,
-    filled: String,
+    outlined: Boolean,
   },
 };
 </script>

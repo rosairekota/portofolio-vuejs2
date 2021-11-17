@@ -2,9 +2,15 @@
 @import"../../assets/scss/mixims.style";
 .skills{
 	background: linear-gradient(180deg, rgba(3,2,23,1) 24%, rgba(19, 17, 48, 0.77) 97%);
-	color:#fff;
+	color:$bg-light;
+	max-height: 40rem;
 	text-align: justify;
-
+    padding: 0;
+	margin: 0;
+	border:1px solid red;
+	.skills-container{
+		padding-top: 6rem;
+	}
 	p{
 		font-size: 1rem;
 		@include applyLineHeight;

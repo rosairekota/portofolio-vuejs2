@@ -1,6 +1,6 @@
 <template>
   <b-container fluid class="">
-    <b-row v-for="about in abouts" :key="about.id" class="banner">
+    <b-row v-for="about in abouts.slice(0, 1)" :key="about.id" class="banner">
       <b-col sm="12" md="8">
         <div class="banner-social-media">
           <div class="social-github" v-if="about.github_link">
@@ -31,8 +31,8 @@
           </p>
         </div>
         <div class="banner-resume">
-          <SharedButton title="Mes Realisations" outline="outline" />
-          <SharedButton title="Télécharger  mon CV" filled="filled" />
+          <SharedButton title="Mes Realisations" outlined />
+          <SharedButton title="Télécharger  mon CV" />
         </div>
       </b-col>
       <div class="col-sm-12 col-md-4">

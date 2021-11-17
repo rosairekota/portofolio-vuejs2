@@ -19,7 +19,7 @@
   h2{
 	position: relative;
 	text-align: center;
-	color:#fff;
+	color:$bg-light;
     transition: all .3s ease-in;
 	font-weight: 700;
 	&::after{
@@ -29,6 +29,7 @@
 		left: 0;
 		top: 6rem;
 	}
+
 }
 
 }

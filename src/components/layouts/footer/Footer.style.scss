@@ -1,0 +1,21 @@
+@import "../../../assets/scss/variables.style";
+@import"../../../assets/scss/mixims.style";
+
+.footer{
+	background: $bg-primary-light;
+    text-align: center;
+    padding:2em;
+	*{color:$bg-light;}
+	line-height: 1.5;
+	p{
+		color:$bg-light;
+	}
+.footer-copy-right{
+        font-size:1rem;
+        a{
+            text-decoration:none;
+            color: $bg-secondary
+		}
+    }
+}
+

@@ -14,14 +14,14 @@ const getters = {
 const actions = {
   fetchAbouts({ commit }) {
     fetchAPI.get("/abouts").then((response) => {
-      commit("GET_ABOUTS", response.data.data);
+      commit("SET_ABOUTS", response.data.data);
     });
   },
 };
 
 //to handle mutations
 const mutations = {
-  GET_ABOUTS: (state, abouts) => {
+  SET_ABOUTS: (state, abouts) => {
     state.abouts = abouts;
   },
 };

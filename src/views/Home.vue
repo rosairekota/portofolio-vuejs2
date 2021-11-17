@@ -3,17 +3,18 @@
     <banner />
     <service />
     <about />
-    <skills />
+
     <project />
+		<contact/>
   </div>
 </template>
 
 <script>
 import Banner from "../components/banner/Banner.vue";
 import Service from "../components/service/Service.vue";
-import Skills from "../components/skill/Skill.vue";
 import About from "../components/about/About.vue";
 import Project from "../components/project/Project.vue";
+import Contact from "../components/contact/Contact.vue";
 
 export default {
   name: "Home",
@@ -21,8 +22,9 @@ export default {
     Banner,
     Service,
     About,
-    Skills,
+
     Project,
-  },
+    Contact
+},
 };
 </script>

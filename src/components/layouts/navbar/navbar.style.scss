@@ -22,12 +22,12 @@ a {
     margin-left: 1.5rem;
 
 }
-&-logo{
-	font-size: 1.8rem;
-}
-span{
-	color:$bg-secondary;
-}
+ &.sticky{
+	background:#030417;
+ }
+  &.bevhor{
+          transition:all 0.5s;
+  }
 
 }
 .fade-enter-active,.fade-leave-active{
@@ -38,8 +38,10 @@ transition: opacity .5s;
     transform: translateX(20px);
 }
 
-@media screen and (max-width:768){
-
+@media screen and (max-width:768px){
+.header{
+	padding:1rem;
+}
 .header-nav{
 		display: none;
 		&.active{

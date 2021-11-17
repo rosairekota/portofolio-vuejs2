@@ -13,24 +13,22 @@
           sm="12"
           md="6"
           class="offset-md-2"
-          v-for="about in abouts"
+          v-for="about in abouts.slice(0, 1)"
           v-bind:key="about.id"
         >
-          <div v-html="about.description">
-            {{ about.description | raw }}
-          </div>
-          <div class="about-contact">
-            <div class="contact_left">
+          <div v-html="about.description"></div>
+          <b-row class="about-contact">
+            <b-col class="col-6 contact-left">
               <p>
                 <span>Nom : </span> {{ about.firstname }} {{ about.lastname }}
               </p>
               <p><span>Email : </span> {{ about.email }}</p>
-            </div>
-            <div class="contact_right">
+            </b-col>
+            <b-col class="col-6">
               <p><span>Phone : </span> {{ about.phone }}</p>
-              <p><span>Linkedin : </span> rosairekota@gmai.com</p>
-            </div>
-          </div>
+              <p><span>Linkedin : </span> {{about.linkedin_link}}</p>
+            </b-col>
+          </b-row>
         </b-col>
       </b-row>
     </b-container>

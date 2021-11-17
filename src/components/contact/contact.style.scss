@@ -1,0 +1,64 @@
+@import "../../assets/scss/variables.style";
+@import"../../assets/scss/mixims.style";
+
+.contact{
+	background: linear-gradient(180deg, rgba(3,2,23,1) 24%, rgba(19, 17, 48, 0.77) 97%);
+    min-height: 40rem;
+	padding: 0;
+	margin: 0;
+	.contact-container{
+		padding-top: 6rem;
+	}
+	a{
+        color:inherit;
+    }
+	a:hover{ color:$bg-light;}
+
+.card-contact{
+	text-align: center;
+	width: 100%;
+	min-height: 230px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items:space-between;
+	background: $bg-primary-light;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	transition: background-color .3s ease-in;
+	padding: 1rem 1.5rem;
+	margin-bottom: 1.5rem;
+    cursor: pointer;
+	&:hover,&:active{
+		background-color:$bg-secondary;
+		color:#fff;
+	.fas{
+		font-size: 4rem;
+		color:#fff;
+		transform: scaleX(-1);
+		transition: all .5s ease;
+	}
+	}
+
+	h4{
+		font-weight: 700;
+	}
+	p{
+		font-size: 1rem;
+		font-weight: 100;
+		line-height: 1.5;
+		font-family: "karla";
+		margin-top: 1rem;
+	}
+	.fas{
+		font-size: 4rem;
+		color:$bg-secondary;
+		margin-bottom: 1.5rem;
+    }
+}
+
+    address{
+        font-style: normal;
+    }
+
+}
