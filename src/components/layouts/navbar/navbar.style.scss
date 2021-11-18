@@ -30,6 +30,32 @@ a {
   }
 
 }
+.scroll-btn{
+     z-index: 999;
+     position: fixed;
+     bottom: 10px;
+     right: 0;
+     background:$bg-secondary;
+     color:$bg-light;
+     width: 45px;
+     height: 45px;
+     cursor: pointer;
+     font-size :22px;
+     text-align: center;
+     line-height: 45px;
+     border-radius:5px;
+     pointer-events: none;
+     opacity: 0;
+     transition: all 0.5s ease;
+
+
+}
+.scroll-btn.active{
+     right: 20px;
+     pointer-events: auto;
+	 transition: all 0.5s ease-out;
+     opacity: 1;
+}
 .fade-enter-active,.fade-leave-active{
 transition: opacity .5s;
 }

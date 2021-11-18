@@ -5,4 +5,8 @@ const selectElements = (element, selectedAll = false) => {
   return document.querySelector(element.trim());
 };
 
-export { selectElements };
+const scrollUp = () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
+export { selectElements, scrollUp };

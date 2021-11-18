@@ -35,13 +35,21 @@
           <SharedButton title="Télécharger  mon CV" />
         </div>
       </b-col>
-      <div class="col-sm-12 col-md-4">
-        <img
-          src="../../assets/illustrations/illustra.svg"
-          alt="illustration_homme_devant_pc"
-          class="banner-image"
-        />
-      </div>
+      <b-col sm="12" md="4">
+        <div class="banner-image">
+          <img
+            src="../../assets/illustrations/illustra.svg"
+            alt="illustration_homme_devant_pc"
+            class="image"
+          />
+          <div class="overlay">
+            <a :href=" about.github_link"
+              >Je suis sur github <br /><br /><span>Username : </span
+              >rosairekota
+            </a>
+          </div>
+        </div>
+      </b-col>
     </b-row>
   </b-container>
 </template>

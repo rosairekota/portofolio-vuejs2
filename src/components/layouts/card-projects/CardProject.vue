@@ -1,12 +1,17 @@
 <template>
-  <div class="card-project">
-    <div class="card-project-image">
-      <img :src="img" alt="image_du_projet">
+  <div class="project-card">
+    <div class="card-img">
+      <img :src="image_url" :alt="title" class="img-fluid" v-show="image_url" />
     </div>
-    <div class="card-body">
- 	 <h4>{{ title }}</h4>
-     <p>{{ description }}</p>
-	</div>
+    <div class="overlay card-info">
+      <h4>{{ title }}</h4>
+      <p>
+        {{ description }}
+      </p>
+      <p class="technos">
+        <a :href="github_link" v-if="github_link">Lien Github</a>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -14,9 +19,11 @@
 export default {
   name: "CardProject",
   props: {
-    icon: String,
+    image_url: String,
     title: String,
     description: String,
+    github_link: String,
+    technologies: { Array, default: () => [] },
   },
 };
 </script>

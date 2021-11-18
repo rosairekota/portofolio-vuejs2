@@ -1,29 +1,53 @@
 @import "../../../assets/scss/variables.style";
 @import"../../../assets/scss/mixims.style";
 
-.card-project{
+.project-card{
 	text-align: center;
 	width: 100%;
 	min-height: 338px;
 	display: flex;
-	overflow: hidden;
 	flex-direction: column;
 	justify-content: center;
-	align-items:space-between;
-	background: #49485f;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 20px;
+	align-items:center;
 	transition: background-color .3s ease-in;
-	padding: 1rem 1.5rem;
-	margin-bottom: 1.5rem;
-    cursor: pointer;
+	img {
+	display: block;
+	width: 100%;
+	min-height: 338px;
+	object-fit: cover;
+	border-radius: 20px;
+	}
+    .overlay {
+		position: absolute;
+		bottom: 0;
+		left: 3.9%;
+		right: 0;
+		box-shadow: 200px -800px 3px 75px #030417e5 inset;
+		overflow: hidden;
+		width: 92%;
+		height: 40%;
+		transition: .5s ease;
+		border-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items:center;
+		justify-content: center;
+	}
+	&:hover .overlay {
+		bottom: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		cursor:pointer;
+		box-shadow: 200px -800px 3px 75px #030417c9 inset;
+   }
+
 	&:hover,&:active{
-		background-color:$bg-secondary;
+
 		color:#fff;
-	.fas{
+	img{
 		font-size: 4rem;
 		color:#fff;
-		transform: scaleX(-1);
 		transition: all .5s ease;
 	}
 	}
@@ -42,13 +66,16 @@
 	color:$bg-secondary;
 	margin-bottom: 1.5rem;
     }
-	.card-project-image{
-		width: 100%;
+	a{
+		color:$bg-secondary;
+		&:hover,&:active,&:visited{
+			color:$bg-secondary;
+		}
 	}
 }
 
 @media screen and (min-width:768px){
-.card-project{
+.project-card{
     margin-bottom: 0;
 	h4{
 		font-weight: 700;
@@ -67,5 +94,3 @@
     }
 }
 }
-
-

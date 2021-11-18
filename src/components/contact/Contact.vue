@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="contact">
+  <b-container fluid class="contact" id="contact">
     <SectionTitle title="Contact" subtitle="Restons en contact" />
     <b-container class="contact-container">
       <address

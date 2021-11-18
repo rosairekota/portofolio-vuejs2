@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <navbar></navbar>
-		<Home />
-		<Footer/>
+    <Home />
+    <Footer />
   </div>
 </template>
 
@@ -10,11 +10,13 @@
 import Navbar from "./components/layouts/navbar/Navbar.vue";
 import Home from "./views/Home.vue";
 import Footer from "./components/layouts/footer/Footer.vue";
+
+
 export default {
   components: {
     Navbar,
     Home,
-    Footer
-},
+    Footer,
+  },
 };
 </script>

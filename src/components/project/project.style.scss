@@ -2,14 +2,23 @@
 @import"../../assets/scss/mixims.style";
 
 .projects{
-    background: linear-gradient(360deg, rgba(3,2,23,1) 24%, rgba(19, 17, 48, 0.77) 97%);
+    background: linear-gradient(180deg, rgba(3,2,23,1) 24%, rgba(19, 17, 48, 0.77) 97%);
     padding: 0;
 	margin: 0;
-	border: 1px solid red;
 	.projects-container{
-		padding-top: 6rem;
+		padding-top: 4rem;
+		margin-bottom: 6rem;
 	}
-
+.projects-filter{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+	margin-top: 6rem;
+	& *{
+		margin-left: 1rem;
+	}
+}
   h2{
 	position: relative;
 	text-align: center;
@@ -32,7 +41,7 @@
 
 @media screen and (min-width:768px){
 .projects{
-	min-height: 50rem;
+	min-height: 85rem;
     padding: 0;
 	margin: 0;
 	.projects-container{

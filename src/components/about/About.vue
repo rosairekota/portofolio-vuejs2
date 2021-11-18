@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="about">
+  <b-container fluid class="about" id="about">
     <SectionTitle
       title="A propos de Moi"
       subtitle="Pourquoi me faire Confiance ?"
@@ -7,7 +7,10 @@
     <b-container class="services-container">
       <b-row>
         <b-col sm="12" md="4">
-          <img :src="photo" alt="" />
+          <div class="about-image">
+            <img :src="photo" alt="image_du_profile" />
+						<div class="overlay"></div>
+          </div>
         </b-col>
         <b-col
           sm="12"
@@ -26,7 +29,10 @@
             </b-col>
             <b-col class="col-6">
               <p><span>Phone : </span> {{ about.phone }}</p>
-              <p><span>Linkedin : </span> {{about.linkedin_link}}</p>
+              <p>
+                <span>Username Github : </span>
+                {{ about.github_link.substring(19, 50) }}
+              </p>
             </b-col>
           </b-row>
         </b-col>
