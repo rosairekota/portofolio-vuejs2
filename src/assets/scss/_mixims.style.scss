@@ -1,9 +1,25 @@
+@import"./brackpoint.style";
 @mixin applySectionPadding
 {
-	padding: 0 6rem;
+
+	@media ($small) {}
+	@media ($medium) {
+		padding: 0 1rem;
+	}
+	@media ($large) {
+		padding: 0 1rem;
+	}
+	@media ($x-large) {
+		padding: 0 6rem;
+	};
+
 }
 
 @mixin applyLineHeight
 {
 	line-height: 2;
+}
+
+@mixin  applyGlobalPaddingTop {
+    padding-top: 10rem;
 }

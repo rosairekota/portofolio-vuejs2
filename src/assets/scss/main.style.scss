@@ -1,5 +1,6 @@
 @import '../../../node_modules/bootstrap/scss/bootstrap';
 @import '../../../node_modules/bootstrap-vue/src/index';
+@import"./brackpoint.style";
 @import './variables.style';
 @import './reset.style';
 @import './font.style';
@@ -15,6 +16,7 @@ body{
 
 a{
     text-decoration: none !important;
+		transition: all .3s ease-in;
     & .router-link-exact-active {
       color: #e95055;
     }
@@ -23,5 +25,8 @@ a{
       color: #e95055;
 
     }
+}
+html {
+  scroll-behavior: smooth !important;
 }
 

@@ -4,16 +4,18 @@
     <div class="scroll-btn" id="scrollBtn" @click="scrollUp">
       <i class="fas fa-arrow-circle-up"></i>
     </div>
-    <div class="header-toggle" id="btnToggle" @click.prevent="handelActive">
-      <i class="fas fa-arrow-circle-up"></i>
-    </div>
+    <div
+      class="header-toggle"
+      id="btnToggle"
+      @click.prevent="handelActive"
+    ></div>
 
     <div class="header-nav">
       <a href="#">Accueil</a>
       <a href="#services">Services</a>
       <a href="#about">A propos</a>
-      <a href="#skills">Competence</a>
-      <a href="#projects">Realisation</a>
+      <a href="#skills">Compétences</a>
+      <a href="#projects">Réalisations</a>
       <a href="#contact">Contact</a>
     </div>
   </div>

@@ -32,7 +32,7 @@
         </div>
         <div class="banner-resume">
           <SharedButton title="Mes Realisations" outlined />
-          <SharedButton title="Télécharger  mon CV" />
+          <SharedButton title="Télécharger  mon CV" filled />
         </div>
       </b-col>
       <b-col sm="12" md="4">
@@ -43,7 +43,7 @@
             class="image"
           />
           <div class="overlay">
-            <a :href=" about.github_link"
+            <a :href="about.github_link"
               >Je suis sur github <br /><br /><span>Username : </span
               >rosairekota
             </a>

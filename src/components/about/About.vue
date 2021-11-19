@@ -1,10 +1,10 @@
 <template>
-  <b-container fluid class="about" id="about">
-    <SectionTitle
+  <div class="about" id="about">
+    <b-container class="services-container">
+			 <SectionTitle
       title="A propos de Moi"
       subtitle="Pourquoi me faire Confiance ?"
     />
-    <b-container class="services-container">
       <b-row>
         <b-col sm="12" md="4">
           <div class="about-image">
@@ -27,7 +27,7 @@
               </p>
               <p><span>Email : </span> {{ about.email }}</p>
             </b-col>
-            <b-col class="col-6">
+            <b-col class="col-6 contact-right">
               <p><span>Phone : </span> {{ about.phone }}</p>
               <p>
                 <span>Username Github : </span>
@@ -38,7 +38,7 @@
         </b-col>
       </b-row>
     </b-container>
-  </b-container>
+  </div>
 </template>
 
 <script>

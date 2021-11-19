@@ -41,25 +41,61 @@
 	color:$bg-secondary;
 	margin-bottom: 1.5rem;
     }
+
+	@media ($small) {
+		&{
+			 max-height: 1rem;
+
+		 }
+	}
+	@media ($medium) {
+		&{
+		h4{
+			font-weight: 700;
+			font-size: 1.2rem;
+		}
+		p{
+			font-size: 0.9rem;
+			font-weight: 100;
+			line-height: 1.5;
+			font-family: "karla";
+			margin-top: 1rem;
+		}
+		.fas{
+		font-size: 4rem;
+		color:$bg-secondary;
+		margin-bottom: 1.5rem;
+		}
+		}
+	}
+	@media ($large) {
+		 &{
+			 max-height: 2rem;
+
+		 }
+	}
+
+	@media ($x-large) {
+	  &{
+		margin-bottom: 0;
+		h4{
+			font-weight: 700;
+		}
+		p{
+			font-size: 1rem;
+			font-weight: 100;
+			line-height: 1.5;
+			font-family: "karla";
+			margin-top: 1rem;
+		}
+		.fas{
+		font-size: 4rem;
+		color:$bg-secondary;
+		margin-bottom: 1.5rem;
+		}
+		}
+	};
+
+
 }
 
-@media screen and (min-width:768px){
-.service-card{
-    margin-bottom: 0;
-	h4{
-		font-weight: 700;
-	}
-	p{
-		font-size: 1rem;
-		font-weight: 100;
-		line-height: 1.5;
-		font-family: "karla";
-		margin-top: 1rem;
-	}
-	.fas{
-	font-size: 4rem;
-	color:$bg-secondary;
-	margin-bottom: 1.5rem;
-    }
-}
-}

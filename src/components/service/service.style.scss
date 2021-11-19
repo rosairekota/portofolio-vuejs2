@@ -1,22 +1,25 @@
 @import "../../assets/scss/variables.style";
 @import"../../assets/scss/mixims.style";
-
+@import"../../assets/scss/brackpoint.style";
 .services{
     background: linear-gradient(180deg, rgba(3,2,23,1) 24%, rgba(19, 17, 48, 0.77) 97%);
     padding: 0;
 	margin: 0;
+	min-height: 40rem;
 	.services-container{
 		padding-top: 6rem;
 	}
-}
-@media screen and (min-width:768px){
-.services{
-	height: 45rem;
-    padding: 0;
-	margin: 0;
-	.services-container{
-		padding-top: 8rem;
+
+	@media ($small) {}
+	@media ($medium) {
+		height: 40rem;
 	}
-}
+	@media ($large) {
+		height: 42rem;
+	}
+	@media ($x-large) {
+		@include applyGlobalPaddingTop;
+		height: 45rem;
+	};
 }
 

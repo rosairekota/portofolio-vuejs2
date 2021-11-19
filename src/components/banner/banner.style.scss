@@ -2,7 +2,7 @@
 @import "../../assets/scss/variables.style";
 @import"../../assets/scss/mixims.style";
 
-
+@import"../../assets/scss/brackpoint.style";
 .container-fluid{
 	background: linear-gradient(360deg, rgba(3,2,23,1) 24%, rgba(19, 17, 48, 0.77) 97%);
 	color:#fff;
@@ -12,6 +12,7 @@
 	justify-content: start;
 	padding-bottom: 1rem;
 	}
+	min-height: 27rem;
 .social-github,.social-linkedin,.social-twitter{
 	width: 3rem;
 	height: 3rem;
@@ -22,7 +23,9 @@
 	transition: background-color .3s ease-in;
 	font-weight: 700;
 	cursor: pointer;
-
+	 &:hover{
+		 background-color:$bg-secondary;
+	 }
 	}
 	h1{
 		font-family: 'Poppins';
@@ -85,12 +88,10 @@
 		}
 	}
 
-}
+@media ($small) {
+&{
 
-@media screen and (min-width:768px) {
-.container-fluid{
-	height: 37rem;
-	padding-top: 10rem;
+	padding: 5rem 0;
 	& .banner{
 	@include applySectionPadding;
 	h1{
@@ -110,25 +111,7 @@
 
 	}
 
-	.banner-social-media{
-
-		.social-github:hover{
-            background-color:rgb(30, 32, 34);
-			border: 0;
-			}
-		.social-twitter:hover{
-            background-color:rgb(73, 164, 238);
-			border: 0;
-		}
-			.social-linkedin:hover{
-            background-color:rgb(41, 118, 180);
-			border: 0;
-			}
-
 	}
-
-	}
-
 	.banner-resume{
 		display: flex;
 		justify-content: start;
@@ -141,3 +124,102 @@
 }
 
 }
+
+
+@media ($medium) {
+&{
+	height: 32rem;
+	padding-top: 10rem;
+	& .banner{
+	@include applySectionPadding;
+	h1{
+		font-family: 'Poppins';
+		font-size: 2.5rem;
+		margin: 2rem 0;
+	}
+
+	p{
+		font-size: 1rem;
+		line-height: 0.3;
+
+	}
+
+	}
+	.banner-resume{
+		display: flex;
+		justify-content: start;
+		margin-top: 2.6rem;
+
+	}
+	.banner-image{
+		margin: 0;
+	}
+}
+
+}
+
+
+@media ($large) {
+&{
+	height: 35rem;
+	padding-top: 10rem;
+	& .banner{
+	@include applySectionPadding;
+	h1{
+		font-family: 'Poppins';
+		font-size: 3rem;
+		margin: 2.4rem 0;
+	}
+
+	p{
+		font-size: 1.2rem;
+		line-height: 0.5;
+
+	}
+
+	}
+	.banner-resume{
+		display: flex;
+		justify-content: start;
+		margin-top: 2.6rem;
+
+	}
+	.banner-image{
+		margin: 0;
+	}
+}
+
+}
+
+@media ($x-large) {
+&{
+	height: 37rem;
+	padding-top: 10rem;
+	& .banner{
+	@include applySectionPadding;
+	h1{
+		font-family: 'Poppins';
+		font-size: 3.3rem;
+		margin: 2.8rem 0;
+	}
+
+	p{
+		font-size: 1.6rem;
+
+	}
+
+	}
+	.banner-resume{
+		display: flex;
+		justify-content: start;
+		margin-top: 2.6rem;
+
+	}
+	.banner-image{
+		margin: 0;
+	}
+}
+
+}
+}
+

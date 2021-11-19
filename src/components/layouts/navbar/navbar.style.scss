@@ -2,7 +2,7 @@
 @import"../../../assets/scss/mixims.style";
  .header {
 	margin: 0;
-	height: 5rem;
+	min-height: 5rem;
 	z-index: 999;
     position:fixed;
     left:0;
@@ -64,7 +64,7 @@ transition: opacity .5s;
     transform: translateX(20px);
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:1023px){
 .header{
 	padding:1rem;
 }
@@ -95,9 +95,12 @@ transition: opacity .5s;
 
 		}
 		 .header-toggle{
-            position: absolute;
+            position:relative;
             right:0;
-            background:url("../../../assets/images/basic/menu.svg"),no-repeat;
+			left: 0;
+			bottom: 0;
+			top: 20%;
+            background:url("../../../assets/images/basic/menu.svg");
             background-size: cover;
             background-position:center;
             height: 40px;
@@ -105,11 +108,12 @@ transition: opacity .5s;
             margin:0 20px;
             cursor: pointer;
             transition: 0.3s ease;
+
           }
 		  .header-toggle.active{
            z-index: 999;
-		   content: "menu";
-           background:url("../../../assets/images/basic/menu.svg"),no-repeat;
+		   content: "";
+           background:url("../../../assets/images/basic/menu.svg");
            background-size: cover;
            background-position:center;
            height: 40px;

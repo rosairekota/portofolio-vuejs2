@@ -7,7 +7,7 @@
     <b-container>
       <b-row>
         <b-col sm="12" md="8 offset-md-2 projects-filter">
-          <SharedButton title="Tous les projets" outlined href="/projects" />
+          <SharedButton title="Tous" outlined href="/projects" />
           <SharedButton title="Fintech" outlined href="/projects" />
           <SharedButton title="Mediatheques" outlined href="/projects" />
           <SharedButton title="Autres" outlined href="/projects" />
@@ -27,7 +27,9 @@
             :title="project.title"
             :description="project.description"
             :image_url="project.image_url"
-						:github_link="project.github_link"
+            :github_link="project.github_link"
+            :website_link="project.website_link"
+            :technologies="project.technologies"
           />
         </b-col>
       </b-row>
