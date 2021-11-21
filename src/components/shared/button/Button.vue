@@ -1,5 +1,9 @@
 <template>
-  <button class="button" :class="[outlined ? 'outlined' : 'filled']">
+  <button
+    :class="[outlined ? 'outlined' : 'filled']"
+    @click="handelFilter"
+    class="button"
+  >
     {{ title }}
   </button>
 </template>

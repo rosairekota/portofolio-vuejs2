@@ -41,6 +41,12 @@
 		margin-bottom: 1rem;
 
 	}
+	.banner-resume{
+		display: flex;
+		justify-content: space-evenly;
+		margin-top: 2.6rem;
+
+	}
 
 	.banner-image{
 		width: 100%;
@@ -91,21 +97,14 @@
 @media ($small) {
 &{
 
-	padding: 5rem 0;
+	padding:0;
 	& .banner{
 	@include applySectionPadding;
 	h1{
 		font-family: 'Poppins';
 		font-size: 3.3rem;
 		margin: 2.8rem 0;
-		@media screen and(max-width:768px) {
-			&{
-				font-size: 2.3rem !important;
-				margin: 0;
-			}
-		}
 	}
-
 	p{
 		font-size: 1.6rem;
 

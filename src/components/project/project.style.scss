@@ -5,10 +5,37 @@
     background: linear-gradient(360deg, rgba(3,2,23,1) 0, rgba(19, 17, 48, 0.77) 97%);
     padding: auto;
 	margin: auto;
-	border: 1px solid red;
 
 	.projects-container{
 		padding-top: 4rem;
+	}
+	.filterLink{
+		display: block;
+		color:#fff;
+		cursor: pointer;
+		padding: 0.5rem 1rem;
+		border:0;
+		color:$bg-light;
+		background-color:transparent;
+		text-align: center;
+		border-radius:40px;
+		transition: background-color .3s ease-in;
+		font-weight: 700;
+		border:2px solid $bg-secondary;
+
+   }
+    .selected{
+		transition: all .2s ease-in;
+		background-color:$bg-secondary;
+		color:$bg-light;
+	}
+
+	.fade-enter-active,.fade-leave-active{
+		transition: opacity 5s transform 5s;
+	}
+	.fade-enter, .fade-leave-active{
+		opacity: 0;
+		transform: translateX(20px);
 	}
 .projects-filter{
 	display: flex;
@@ -47,6 +74,15 @@
 	margin: 0;
   padding-top: 5rem;
 
+   .filterLink{
+
+	width: 13rem;
+	font-size: 1rem;
+	padding: 1.3rem 1rem;
+	font-weight: 700;
+	color:#fff;
+
+}
 }
 }
 

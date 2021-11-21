@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="services" id="services">
+  <b-container fluid class="services reveal" id="services">
     <SectionTitle
       title="Services"
       subtitle="Quels sont mes domaines d'expertise ?"

@@ -1,7 +1,7 @@
 <template>
   <b-container fluid class="">
     <b-row v-for="about in abouts.slice(0, 1)" :key="about.id" class="banner">
-      <b-col sm="12" md="8">
+      <b-col sm="12 mt-4" md="8">
         <div class="banner-social-media">
           <div class="social-github" v-if="about.github_link">
             <a :href="about.github_link">
@@ -26,7 +26,7 @@
           <h1>{{ title }} {{ about.firstname }} {{ about.lastname }}</h1>
           <p>Développeur professionnel web et web mobile.</p>
           <br />
-          <p class="banner-description">
+          <p>
             Je suis enthousiaste, créatif et innovant.
           </p>
         </div>
@@ -35,19 +35,14 @@
           <SharedButton title="Télécharger  mon CV" filled />
         </div>
       </b-col>
-      <b-col sm="12" md="4">
-        <div class="banner-image">
+      <b-col sm="12 pb-4 mt-4" md="4">
+        <div class="banner-image mt-2">
           <img
             src="../../assets/illustrations/illustra.svg"
             alt="illustration_homme_devant_pc"
             class="image"
           />
-          <div class="overlay">
-            <a :href="about.github_link"
-              >Je suis sur github <br /><br /><span>Username : </span
-              >rosairekota
-            </a>
-          </div>
+          <div class="overlay"></div>
         </div>
       </b-col>
     </b-row>

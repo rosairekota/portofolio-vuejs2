@@ -1,9 +1,13 @@
 @import "../../../assets/scss/variables.style";
 @import"../../../assets/scss/mixims.style";
+@import "../../../assets/scss/brackpoint.style";
 
 
 .logo{
-	font-size: 1.8rem;
+	font-size: 1.6rem;
+	position: relative;
+	top:0;
+	left: -1rem;
 }
 .center{
 			text-align: center;
@@ -15,3 +19,14 @@ span{
 	color:$bg-secondary;
 }
 
+@media ($medium){
+	.logo{
+		font-size: 2rem;
+		font-weight: 800;
+		position: relative;
+		top:0;
+		right: 0;
+		left: 0;
+
+	}
+}

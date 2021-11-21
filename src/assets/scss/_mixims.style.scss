@@ -2,7 +2,8 @@
 @mixin applySectionPadding
 {
 
-	@media ($small) {}
+	@media ($small) {
+	}
 	@media ($medium) {
 		padding: 0 1rem;
 	}

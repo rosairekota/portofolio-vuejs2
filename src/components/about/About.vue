@@ -1,15 +1,15 @@
 <template>
-  <div class="about" id="about">
+  <div class="about reveal" id="about">
     <b-container class="services-container">
-			 <SectionTitle
-      title="A propos de Moi"
-      subtitle="Pourquoi me faire Confiance ?"
-    />
+      <SectionTitle
+        title="A propos de Moi"
+        subtitle="Pourquoi me faire Confiance ?"
+      />
       <b-row>
         <b-col sm="12" md="4">
           <div class="about-image">
             <img :src="photo" alt="image_du_profile" />
-						<div class="overlay"></div>
+            <div class="overlay"></div>
           </div>
         </b-col>
         <b-col

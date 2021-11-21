@@ -3,6 +3,7 @@ import { fetchAPI } from "../../config/ApiURL";
 //to handle state
 const state = {
   abouts: [],
+  isLoading: false,
 };
 
 //to handle state

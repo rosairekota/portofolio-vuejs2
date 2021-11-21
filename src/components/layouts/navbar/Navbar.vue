@@ -61,12 +61,24 @@ export default {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     },
+    revealWebSiteElements() {
+      let reveals = selectElements(".reveal");
+      for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let revealTop = reveals[i].getBoundingClientRect().top;
+        let revealPoint = 50;
+        if (revealTop < windowHeight - revealPoint) {
+          reveals[i].classList.toggle("active");
+        }
+      }
+    },
   },
 
   mounted() {
     window.addEventListener("scroll", this.handelScroll);
 
     window.addEventListener("scroll", this.handelToUpScroll);
+    window.addEventListener("scroll", this.revealWebSiteElements);
 
     this.linksClick();
   },

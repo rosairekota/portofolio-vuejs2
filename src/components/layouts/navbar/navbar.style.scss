@@ -23,7 +23,8 @@ a {
 
 }
  &.sticky{
-	background:#030417;
+	transition:background-color .8s;
+	background:$bg-primary;
  }
   &.bevhor{
           transition:all 0.5s;
