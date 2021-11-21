@@ -26,12 +26,10 @@
           <h1>{{ title }} {{ about.firstname }} {{ about.lastname }}</h1>
           <p>Développeur professionnel web et web mobile.</p>
           <br />
-          <p>
-            Je suis enthousiaste, créatif et innovant.
-          </p>
+          <p>Je suis enthousiaste, créatif et innovant.</p>
         </div>
         <div class="banner-resume">
-          <SharedButton title="Mes Realisations" outlined />
+          <SharedButton title="Mes Realisations" outlined class="mr-4" />
           <SharedButton title="Télécharger  mon CV" filled />
         </div>
       </b-col>
