@@ -5,7 +5,7 @@
 .about
 {
     background: linear-gradient(360deg, rgba(3,2,23,1) 24%, rgba(19, 17, 48, 0.77) 97%);
-	height: 57rem;
+	height: 45rem;
 	color:#fff;
 	font-size: 1rem;
 	text-align: justify;
@@ -73,6 +73,28 @@
 			font-size: 1rem;
 			line-height: 1.5;
 		}
+		h4
+		{
+			font-size: 1.5rem;
+			padding: 1rem 0;
+		}
+		p
+		{
+			font-size: 0.89rem;
+		}
+	.about-description
+	{
+		padding: 0 .6rem;
+
+	}
+	.contact-right,.contact-left{
+		p,span{
+			font-size: .8rem;
+		}
+		margin: auto;
+		padding: auto;
+	}
+
 .about-contact
 {
 	display: flex;
@@ -94,16 +116,18 @@
 }
 }
  @media ($small) {
+	 height: 38rem;
 	 &{
 		 img
 		{
-			width: 100px;
+			width: 80%;
+			height: auto;
 		}
+
 	 }
  }
 	@media ($medium) {
-
-
+		height: 38rem;
 		&
 		{   padding: auto;
 			height: 38rem;
@@ -113,14 +137,24 @@
 				object-fit: cover;
 				height: auto;
 			}
-		.overlay
-	    {
+			.overlay
+	   		{
 		      position: absolute;
 		      bottom: 0;
 		      left:0;
 		      height: auto;
 			  box-shadow: 200px -800px 3px 75px #08071daf inset;
-		}
+			}
+			.about-description
+			{
+				padding:0;
+
+			}
+			.contact-right,.contact-left{
+				p,span{
+					font-size: 0.9rem;
+				}
+			}
 			h4
 			{
 			font-size: 1.2rem;
@@ -192,12 +226,9 @@
 			p{
 				font-size: 1rem;
 			}
-			.contact_left,.contact_right
-			{
-				p
-				{
-					font-size: .8rem;
-
+			.contact-right,.contact-left{
+				p,span{
+					font-size: .9rem;
 				}
 			}
 		};
@@ -223,7 +254,11 @@
 				margin-top: -10rem ;
 				padding-bottom: 8rem;
 				}
-
+			.contact-right,.contact-left{
+				p,span{
+					font-size: 1rem;
+				}
+			}
 
 	};
 }

@@ -19,7 +19,8 @@
           v-for="about in abouts.slice(0, 1)"
           v-bind:key="about.id"
         >
-          <div v-html="about.description"></div>
+         <div class="about-description">
+					  <div v-html="about.description"></div>
           <b-row class="about-contact">
             <b-col class="col-6 contact-left">
               <p>
@@ -35,6 +36,7 @@
               </p>
             </b-col>
           </b-row>
+				 </div>
         </b-col>
       </b-row>
     </b-container>
