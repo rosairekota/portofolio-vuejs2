@@ -13,7 +13,8 @@
 	justify-content: space-between;
 	background-color:transparent;
 	font-size: 1rem;
-	@include applySectionPadding;
+	// @include applySectionPadding;
+	padding: 0 5.5rem;
 
 a {
     font-weight: 700;
@@ -69,6 +70,7 @@ transition: opacity .5s;
 .header{
 	padding:1rem;
 }
+
 .header-nav{
 		display: none;
 		&.active{
@@ -76,7 +78,8 @@ transition: opacity .5s;
         position:fixed;
         top: 0;
         right: 0;
-        background:rgba(0, 0, 0, 0.884);
+		bottom: 0;
+        background:rgba(36, 44, 88, 0.884);
         display: flex;
         flex-direction: column;
         align-self:space-between;
@@ -85,8 +88,7 @@ transition: opacity .5s;
         height: 100%;
         transition: 5s ease;
         text-align: center;
-		margin-top: 1rem;
-        transition: 0.5s ease;
+        transition: 0.5s ease-in;
 		}
 		& a{
 
@@ -95,13 +97,17 @@ transition: opacity .5s;
         margin: 1.2rem;
 
 		}
-		 .header-toggle{
+
+	}
+
+	.header-toggle
+	{
             position:relative;
             right:0;
 			left: 0;
 			bottom: 0;
 			top: 20%;
-            background:url("../../../assets/images/basic/menu.svg");
+            background:url("../../../assets/images/basic/bars-solid.svg");
             background-size: cover;
             background-position:center;
             height: 40px;
@@ -110,19 +116,19 @@ transition: opacity .5s;
             cursor: pointer;
             transition: 0.3s ease;
 
-          }
-		  .header-toggle.active{
-           z-index: 999;
-		   content: "";
-           background:url("../../../assets/images/basic/menu.svg");
-           background-size: cover;
-           background-position:center;
-           height: 40px;
-           width: 40px;
-           margin:0 20px;
-           transition: 0.3s ease;
-           filter: invert(0);
-          }
+    }
+	 .header-toggle.active
+	 {
+        z-index: 999;
+		content: "";
+        background:url("../../../assets/images/basic/times-solid.svg");
+        background-size: cover;
+        background-position:center;
+        height: 40px;
+        width: 40px;
+        margin:0 20px;
+        transition: 0.3s ease;
+        filter: invert(0);
+        }
 
-	}
 }

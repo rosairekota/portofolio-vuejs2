@@ -4,7 +4,7 @@
       :to="{ name: 'home' }"
       :class="[center ? 'center' : 'left']"
       class="logo"
-      >rosaire<span>.</span>kota</router-link
+      >rkota<span>.</span>dev <span class="logo-code">&lt;&gt;</span></router-link
     >
   </div>
 </template>

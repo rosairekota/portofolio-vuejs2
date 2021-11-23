@@ -44,6 +44,7 @@
 		.techons-text{
 			span,h5,div{
 				display: block;
+				font-family: "Karla-Light";
 			}
 			.skill-progress{
 				border: 1px solid $bg-light;
@@ -52,6 +53,7 @@
 				margin-bottom: 1rem;
 			}
 		}
+
 		.techno-bar{
 			width: 100%;
 			height: 10px;

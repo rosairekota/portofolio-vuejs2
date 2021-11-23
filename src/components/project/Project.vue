@@ -47,14 +47,18 @@
           v-for="project in filteredProject"
           v-bind:key="project.id"
         >
-            <CardProject
-              :title="project.title"
-              :description="project.description"
-              :image_url="project.image_url"
-              :github_link="project.github_link"
-              :website_link="project.website_link"
-              :technologies="project.technologies"
-            />
+          <CardProject
+            :title="project.title"
+            :description="project.description"
+            :image_url="project.image_url"
+            :github_link="project.github_link"
+            :website_link="project.website_link"
+            :technologies="project.technologies"
+            v-if="project.category_id"
+          />
+          <div v-if="!project.category_id">
+            Aucun projet pour cette categorie
+          </div>
         </b-col>
       </b-row>
     </b-container>
@@ -96,12 +100,16 @@ export default {
       projects: "projects",
     }),
     filteredProject() {
-      if (this.filter === "web".toLocaleLowerCase()) {
-        return this.projects.filter((item) =>
-          item.title.toLowerCase().includes("t")
-        );
+      if (this.filter === "desktop".toLocaleLowerCase()) {
+        return this.projects.filter((item) => item.category.id === 1);
       }
-      return this.projects.filter((item) => item.description.includes("a"));
+      if (this.filter === "mobile".toLocaleLowerCase()) {
+        return this.projects.filter((item) => item.category.id === 2);
+      }
+      if (this.filter === "web".toLocaleLowerCase()) {
+        return this.projects.filter((item) => item.category.id === 4);
+      }
+      return this.projects;
     },
   },
   methods: {

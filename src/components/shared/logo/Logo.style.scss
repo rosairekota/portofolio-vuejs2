@@ -8,6 +8,14 @@
 	position: relative;
 	top:0;
 	left: -1rem;
+	& .logo-code{
+		width: 100%;
+		height: auto;
+		box-shadow: 100px -10px 180px $bg-light inset;
+		border-radius: 100%;
+		padding: 0 .4rem;
+		color:$bg-secondary;
+	}
 }
 .center{
 			text-align: center;
@@ -17,6 +25,15 @@
 }
 span{
 	color:$bg-secondary;
+	transition: all .5s ease-in;
+	&:hover{
+		color:$bg-light;
+	}
+}
+a:hover{
+	span{
+		color:$bg-light;
+	}
 }
 
 @media ($medium){

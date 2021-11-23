@@ -3,9 +3,9 @@
     <banner />
     <service />
     <about />
-    <skill/>
+    <skill />
     <project />
-		<contact/>
+    <contact />
   </div>
 </template>
 
@@ -26,6 +26,6 @@ export default {
     Project,
     Contact,
     Skill,
-},
+  },
 };
 </script>
